@@ -485,7 +485,7 @@
             <div class="register-panel">
                 <div class="register-header">
                     <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h2>تحديد المرحلة الدراسية <small>أدخل تاريخ ميلاد الطفل</small></h2>
+                    <h2>تحديد المرحلة الدراسية <small>أدخل تاريخ ميلاد الطالب المستجد</small></h2>
                 </div>
 
                 <!-- اختيار نوع التاريخ -->
@@ -514,7 +514,7 @@
                     </div>
                 </div>
 
-                <button class="check-btn" id="checkBtn"><i class="fas fa-search"></i> تحقق من المرحلة</button>
+                <button class="check-btn" id="checkBtn"><i class="fas fa-search"></i> تحقق من التسجيل</button>
             </div>
         </div>
 
@@ -662,8 +662,8 @@
                 }
                 else if (birthMoment.isBetween(CUTOFF_GRADE1_SECOND_START, CUTOFF_GRADE1_SECOND_END, null, '[]')) {
                     levelText = 'الصف الأول الابتدائي (الفئة الثانية)';
-                    infoMessage = '⚠️ الطفل لم يكمل 6 سنوات (بفارق أقصاه 90 يوماً). يجب تقديم ما يثبت دراسة سنة كاملة في رياض الأطفال.';
-                    note = '✔️ يشترط دراسة سنة في رياض الأطفال (المستوى KG3).';
+                    infoMessage = '⚠️ الطالب لم يكمل 6 سنوات (بفارق أقصاه 90 يوماً). يجب تقديم ما يثبت دراسة سنة كاملة في رياض الأطفال.';
+                    note = '  يشترط دراسة سنة والحصول على شهادة في رياض الأطفال (المستوى KG3).';
                     showLink = true;
                 }
                 else if (birthMoment.isAfter(CUTOFF_GRADE1_SECOND_END) && birthMoment.isSameOrBefore(CUTOFF_KG3_END)) {
@@ -687,12 +687,12 @@
                 else if (birthMoment.isBefore('2015-01-01')) {
                     levelText = 'أكبر من السن النظامي';
                     infoMessage = '📌 عمر الطفل أكبر من السن النظامي للصف الأول الابتدائي، يرجى مراجعة المدرسة.';
-                    note = 'يمكن التقديم بعد التنسيق مع الإدارة.';
+                    note = 'يمكن التقديم بعد التنسيق مع إدارة التعليم.';
                     showLink = true; // نعطيه رابط مع تنبيه
                 }
                 else {
                     levelText = 'أقل من السن المطلوب';
-                    infoMessage = '🔸 عمر الطفل أقل من الحد الأدنى للقبول في الصف الأول الابتدائي ومرحلة رياض الأطفال.';
+                    infoMessage = '🔸 عمر الطالب أقل من الحد الأدنى للقبول في الصف الأول الابتدائي ومرحلة رياض الأطفال.';
                     note = 'سيتم فتح التسجيل لاحقاً للفئات العمرية الأصغر.';
                     showLink = false;
                 }
